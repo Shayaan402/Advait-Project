@@ -26,10 +26,10 @@ NEGATIVE_WORDS = {
     "never": -1, "ground": -1, "treads": -1,
 }
 def sentiment_analysis(text):
-    # Remove punctuation and convert to lowercase
     translator = str.maketrans('', '', string.punctuation)
     cleaned_text = text.translate(translator).lower()
     words = cleaned_text.split()
+    
     score = 0
     for word in words:
         if word in POSITIVE_WORDS:
